@@ -34,6 +34,20 @@ public class DrawDemo
 
         square(pen);
     }
+    
+    /**
+     * Dibuja un triangulo en la pantalla
+     */
+    public void drawTriangle(int posicionX, int posicionY)
+    {
+        Pen pen = new Pen(posicionX, posicionY, myCanvas);
+        pen.setColor(Color.GREEN);
+
+        for (int i=0; i<3; i++) {
+            pen.move(150);
+            pen.turn(-120);
+        }
+    }
 
     /**
      * Draw a wheel made of many squares.
@@ -84,5 +98,5 @@ public class DrawDemo
     public void clear()
     {
         myCanvas.erase();
-    }
+    }   
 }
