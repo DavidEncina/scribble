@@ -76,6 +76,22 @@ public class DrawDemo
             pen.turn(-(360/n));
         }
     }
+    
+    /**
+     * Dibuja una espiral en la pantalla
+     */
+    public void drawSpiral()
+    {
+        Pen pen = new Pen(250, 210, myCanvas);
+        pen.setColor(Color.GREEN);
+        int distancia = 15;
+        
+        for (int i = 0; i < 40; i++) {
+            pen.move(distancia);
+            pen.turn(-90);
+            distancia = distancia + 10;
+        }
+    }
 
     /**
      * Draw a wheel made of many squares.
