@@ -48,6 +48,20 @@ public class DrawDemo
             pen.turn(-120);
         }
     }
+    
+    /**
+     * Dibuja un pentagono en la pantalla
+     */
+    public void drawPentagon()
+    {
+        Pen pen = new Pen(200, 250, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for (int i = 0; i < 5; i++) {
+            pen.move(150);
+            pen.turn(-72);
+        }
+    }
 
     /**
      * Draw a wheel made of many squares.
