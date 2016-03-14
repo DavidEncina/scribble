@@ -62,6 +62,20 @@ public class DrawDemo
             pen.turn(-72);
         }
     }
+    
+    /**
+     * Dibuja un poligono que define el usuario en la pantalla
+     */
+    public void drawPolygon(int n)
+    {
+        Pen pen = new Pen(200, 250, myCanvas);
+        pen.setColor(Color.GREEN);
+        
+        for (int i = 0; i < n; i++) {
+            pen.move(60);
+            pen.turn(-(360/n));
+        }
+    }
 
     /**
      * Draw a wheel made of many squares.
